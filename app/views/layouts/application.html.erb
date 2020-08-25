@@ -12,7 +12,15 @@
   <body>
   <%=link_to 'Home',root_path %>
   <%= link_to 'About Us', about_path %>
+  <%= link_to "Create New Article", new_article_path  %>
+  <% flash.each do |name,msg| %>
+     <ul>
+       <li>
+         <%=msg %>
+       </li>
+     </ul>
 
+  <% end %>
     <%= yield %>
   </body>
 </html>
